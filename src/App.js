@@ -2,6 +2,16 @@ import './App.css';
 import React from "react";
 import Data from "./file.json"
 function App() {
+  // const [data, setData] = useState([]);
+  // useEffect(() => {
+  //   getData();
+  // }, [])
+  // async function getData() {
+  //   let result = await fetch('http://universities.hipolabs.com/search?country=India');
+  //   // let result = await fetch('');
+  //   result = await result.json();
+  //   setData(result);
+  // }
   return (
     <div className="App">
       <div className="heading-div">
