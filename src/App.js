@@ -1,5 +1,6 @@
 import './App.css';
 import React from "react";
+// import React,{useState,useEffect} from "react";
 import Data from "./file.json"
 function App() {
   // const [data, setData] = useState([]);
@@ -8,7 +9,6 @@ function App() {
   // }, [])
   // async function getData() {
   //   let result = await fetch('http://universities.hipolabs.com/search?country=India');
-  //   // let result = await fetch('');
   //   result = await result.json();
   //   setData(result);
   // }
@@ -27,6 +27,7 @@ function App() {
         </thead>
         <tbody>
           {
+            // data.map((item, i) =>
             Data.map((item, i) =>
               <tr key={i}>
                 <td>{i + 1}</td>
