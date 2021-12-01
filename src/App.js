@@ -1,17 +1,7 @@
 import './App.css';
-import React, { useState, useEffect } from "react";
-import { Link, BrowserRouter } from "react-router-dom";
+import React from "react";
+import Data from "./file.json"
 function App() {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    getData();
-  }, [])
-  async function getData() {
-    let result = await fetch('http://universities.hipolabs.com/search?country=India');
-    result = await result.json();
-    setData(result);
-  }
-  console.log(data);
   return (
     <div className="App">
       <div className="heading-div">
@@ -27,7 +17,7 @@ function App() {
         </thead>
         <tbody>
           {
-            data.map((item, i) =>
+            Data.map((item, i) =>
               <tr key={i}>
                 <td>{i + 1}</td>
                 <a href={item.web_pages[0]} target="_blank">{item.name}</a>
